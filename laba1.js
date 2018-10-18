@@ -1,5 +1,3 @@
-// function for the first lab
-
 let a = process.argv[2]
 let b = process.argv[3]
 let c = process.argv[4]
