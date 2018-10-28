@@ -15,7 +15,7 @@ function resolve (a, b, c) {
     return;
   } else if (disc == 0){
     x = -b/(2*a);
-    console.log(`Your radical is: \n\t\tx = ${x}`);
+    console.log(`Radical is: \n\t\tx = ${x}`);
     return;
   } else {
     disc = Math.abs(disc)
