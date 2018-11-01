@@ -9,12 +9,12 @@ function resolve (a, b, c) {
 
   let disc = b*b - (4*a*c);
   if (disc > 0) {
-    x1 = (-b + Math.sqrt(disc))/2*a;
-    x2 = (-b - Math.sqrt(disc))/2*a;
+    x1 = (-b + Math.sqrt(disc)) / 2*a;
+    x2 = (-b - Math.sqrt(disc)) / 2*a;
     console.log(`Radicals are: \n\t\tx1 = ${x1}  \n\t\tx2 = ${x2}`);
     return;
   } else if (disc == 0){
-    x = -b/(2*a);
+    x = -b / (2*a);
     console.log(`Radical is: \n\t\tx = ${x}`);
     return;
   } else {
