@@ -1,17 +1,27 @@
 let a = process.argv[2]
 let b = process.argv[3]
 let c = process.argv[4]
-let x1,x2;
-let discriminant = b*b-4*a*c
-console.log (discriminant)
-if (discriminant>0){
-x1 = (-b - Math.sqrt(discriminant))/2
-x2 = (-b + Math.sqrt(discriminant))/2
-console.log (`x1 = ${x1}\nx2 = ${x2}\ndiscriminant = ${discriminant}`)
-} else if (discriminant === 0) {
-x1 = (-b/2*a);
-console.log (`x1 = ${x1}\ndiscr = ${discriminant}`)
-} else if (discriminant < 0) {
-console.log ('discriminant<0')
+
+resolve(a, b, c)
+
+function resolve (a, b, c) {
+  console.log(`Your equation: ${a}x^2 + (${b})x + (${c})`);
+
+  let disc = b*b - (4*a*c);
+  if (disc > 0) {
+    x1 = (-b + Math.sqrt(disc))/2*a;
+    x2 = (-b - Math.sqrt(disc))/2*a;
+    console.log(`Radicals are: \n\t\tx1 = ${x1}  \n\t\tx2 = ${x2}`);
+    return;
+  } else if (disc == 0){
+    x = -b/(2*a);
+    console.log(`Radical is: \n\t\tx = ${x}`);
+    return;
+  } else {
+    disc = Math.abs(disc)
+    x1 = `(${-b} + ${Math.sqrt(disc)}i)/${2*a}`;
+    x2 = `(${-b} - ${Math.sqrt(disc)}i)/${2*a}`;
+    console.log(`Radicals are: \n\t\tx1 = ${x1}  \n\t\tx2 = ${x2}`);
+    return;
+  }
 }
-console.log (discriminant)
